@@ -1,0 +1,23 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "d1-tutorial",
+	"main": "src/index.js",
+	"compatibility_date": "2025-07-18",
+	"observability": {
+		"enabled": true
+	}
+	,
+	
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "prod-d1-tutorial",
+      "database_id": "479690c9-8214-4a42-b170-ecc4d01f9efc"       
+    }
+  ]
+
+}

@@ -1,0 +1,9 @@
+LOCALLY----->
+
+npx wrangler d1 execute prod-d1-tutorial --local --file=./schema/users.sql
+
+npx wrangler d1 execute prod-d1-tutorial --local --command="SELECT * FROM Customers"
+
+
+FOR CLOUDFLARE----->
+ type query in query editor in cloudflare

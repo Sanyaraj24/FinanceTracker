@@ -1,0 +1,11 @@
+onAuthStateChanged returns an unsubscribe function that can be used to remove the listener.
+
+In the useEffect hook, we store this function in the unsubscribe variable.
+
+This cleanup is important because:
+
+It removes the listener when the component unmounts
+
+Prevents memory leaks
+
+Stops unnecessary updates to an unmounted component
