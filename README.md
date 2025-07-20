@@ -23,14 +23,7 @@ A robust, full-stack personal finance tracker designed to provide users with an 
 
 
 🚀 Getting Started
-✨ Features
-Feature	Description
-📊 Transaction Management	Add, retrieve, and visualize all your financial transactions easily.
-🔐 Secure Authentication	Firebase-based login keeps your dashboard private and protected.
-☁️ Cloud-Powered Backend	Fast, scalable backend using Cloudflare Workers + D1 for efficient storage.
-📈 Insightful Visualizations	View financial data with interactive and dynamic charts.
-💰 Categorized Tracking	Separate tracking for income, expenses, and transfers.
-🔄 Cross-Device Sync	Seamlessly sync data across all devices via cloud storage.
+
 
 Endpoint	Method	Description
 /api/add-transaction	POST	Adds a new financial transaction.
