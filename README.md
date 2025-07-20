@@ -23,6 +23,14 @@ A robust, full-stack personal finance tracker designed to provide users with an 
 
 
 🚀 Getting Started
+✨ Features
+Feature	Description
+📊 Transaction Management	Add, retrieve, and visualize all your financial transactions easily.
+🔐 Secure Authentication	Firebase-based login keeps your dashboard private and protected.
+☁️ Cloud-Powered Backend	Fast, scalable backend using Cloudflare Workers + D1 for efficient storage.
+📈 Insightful Visualizations	View financial data with interactive and dynamic charts.
+💰 Categorized Tracking	Separate tracking for income, expenses, and transfers.
+🔄 Cross-Device Sync	Seamlessly sync data across all devices via cloud storage.
 
 Endpoint	Method	Description
 /api/add-transaction	POST	Adds a new financial transaction.
@@ -30,15 +38,6 @@ Endpoint	Method	Description
 /api/add-account	POST	Adds a new financial account.
 /api/get-accounts	GET	Retrieves accounts linked to a user_id.
 
-🛠 Tech Stack
-Category	Technology	Description
-Frontend	Next.js 14 (App Router)	React framework for building fast, scalable UIs.
-Tailwind CSS	Utility-first CSS for rapid styling.
-Chart.js	For interactive data visualizations.
-Backend	Cloudflare Workers	Serverless backend execution.
-Cloudflare D1 (SQLite)	Serverless SQL DB running globally via Cloudflare.
-Auth	Firebase	Google’s secure authentication system.
-AI	Gemini API	Used for AI-powered data extraction and enhancements.
 
 🚀 Deployment
 Frontend (Vercel)
