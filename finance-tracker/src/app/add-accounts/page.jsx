@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../config/firebase"; // adjust path if needed
+import { auth } from "../config/firebase";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
 
@@ -49,8 +49,6 @@ const AddAccountPage = () => {
       is_active: true,
     };
 
-    console.log("Sending payload:", payload);
-
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/api/add-accounts`,
@@ -78,26 +76,26 @@ const AddAccountPage = () => {
         setAccounts((prev) => [...prev, data.account]);
       } else {
         toast.error(data.error || data.message || "Failed to add account.");
-        console.error("API error response:", data);
       }
     } catch (err) {
-      console.error("Fetch error:", err);
       toast.error("An error occurred while adding the account.");
     }
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow-sm border border-gray-100">
+    <div className="p-6 max-w-4xl mx-auto bg-[#181a24] rounded-lg border border-[#2e3040]">
       <div className="mb-8">
-        <h2 className="text-2xl font-bold text-gray-800 mb-1">Your Accounts</h2>
-        <p className="text-gray-600">
+        <h2 className="text-2xl font-bold text-[#6f6dc6] mb-1">
+          Your Accounts
+        </h2>
+        <p className="text-gray-300">
           Manage all your financial accounts in one place
         </p>
       </div>
 
-      <div className="mb-8 p-6 bg-white rounded-lg border border-gray-200 shadow-xs">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
-          <FaPlus className="text-blue-500" />
+      <div className="mb-8 p-6 bg-[#1e2030] rounded-lg border border-[#2e3040]">
+        <h3 className="text-lg font-semibold text-gray-200 mb-4 flex items-center gap-2">
+          <FaPlus className="text-[#6f6dc6]" />
           Add New Account
         </h3>
 
@@ -106,7 +104,7 @@ const AddAccountPage = () => {
           onSubmit={handleSubmit}
         >
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Account Name
             </label>
             <input
@@ -118,12 +116,12 @@ const AddAccountPage = () => {
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
               placeholder="e.g. Main Savings"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Account Type
             </label>
             <select
@@ -133,27 +131,41 @@ const AddAccountPage = () => {
               onChange={(e) =>
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             >
-              <option value="" disabled>
+              <option value="" disabled className="bg-[#1e2030]">
                 Select type
               </option>
-              <option value="checking">Checking</option>
-              <option value="savings">Savings</option>
-              <option value="credit_card">Credit Card</option>
-              <option value="cash">Cash</option>
-              <option value="investment">Investment</option>
-              <option value="loan">Loan</option>
-              <option value="wallet">Wallet</option>
+              <option value="checking" className="bg-[#1e2030]">
+                Checking
+              </option>
+              <option value="savings" className="bg-[#1e2030]">
+                Savings
+              </option>
+              <option value="credit_card" className="bg-[#1e2030]">
+                Credit Card
+              </option>
+              <option value="cash" className="bg-[#1e2030]">
+                Cash
+              </option>
+              <option value="investment" className="bg-[#1e2030]">
+                Investment
+              </option>
+              <option value="loan" className="bg-[#1e2030]">
+                Loan
+              </option>
+              <option value="wallet" className="bg-[#1e2030]">
+                Wallet
+              </option>
             </select>
           </div>
 
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Balance
             </label>
             <div className="relative">
-              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+              <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">
                 ₹
               </span>
               <input
@@ -164,13 +176,13 @@ const AddAccountPage = () => {
                   setFormData({ ...formData, [e.target.name]: e.target.value })
                 }
                 placeholder="0.00"
-                className="w-full px-3 py-2 pl-8 border border-gray-300 rounded-md text-gray-800"
+                className="w-full px-3 py-2 pl-8 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
               />
             </div>
           </div>
 
           <div className="space-y-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Bank Name
             </label>
             <input
@@ -181,12 +193,12 @@ const AddAccountPage = () => {
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
               placeholder="Bank name"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             />
           </div>
 
           <div className="space-y-1 md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Account Number
             </label>
             <input
@@ -197,12 +209,12 @@ const AddAccountPage = () => {
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
               placeholder="Account number"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             />
           </div>
 
           <div className="space-y-1 md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Currency
             </label>
             <input
@@ -213,12 +225,12 @@ const AddAccountPage = () => {
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
               placeholder="INR, USD, etc."
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             />
           </div>
 
           <div className="space-y-1 md:col-span-2">
-            <label className="block text-sm font-medium text-gray-700 mb-1">
+            <label className="block text-sm font-medium text-gray-300 mb-1">
               Notes
             </label>
             <input
@@ -229,14 +241,14 @@ const AddAccountPage = () => {
                 setFormData({ ...formData, [e.target.name]: e.target.value })
               }
               placeholder="Optional notes"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-800"
+              className="w-full px-3 py-2 border border-[#2e3040] rounded-md bg-[#181a24] text-gray-200 focus:ring-1 focus:ring-[#6f6dc6] focus:border-[#6f6dc6]"
             />
           </div>
 
           <div className="md:col-span-2 pt-2">
             <button
               type="submit"
-              className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-md text-sm font-medium transition-colors shadow-xs w-full md:w-auto"
+              className="flex items-center justify-center gap-2 bg-[#6f6dc6] hover:bg-[#5e5cb3] text-white px-4 py-2.5 rounded-md text-sm font-medium transition-colors w-full md:w-auto"
             >
               <FaPlus size={14} /> Add Account
             </button>
