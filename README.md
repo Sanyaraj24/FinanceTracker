@@ -145,6 +145,9 @@ npx wrangler publish
 
 📸 Screenshots
 
+<img width="950" height="437" alt="image" src="https://github.com/user-attachments/assets/ea7f1454-396c-43f2-a13f-23fb5d075133" />
+
+
 
 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
