@@ -1,88 +1,163 @@
-# 🧾 FinanceTracker
+🧾BachatBUDDY
+A robust, full-stack personal finance tracker designed to provide users with an intuitive and powerful way to manage their financial transactions. With a clean, user-friendly interface and a scalable, cloud-powered backend, BachatBuddy helps you gain clarity and control over your spending, income, and transfers.
 
-A full-stack personal finance tracker that helps users manage transactions with a clean UI and cloud-powered backend.  
-It is composed of:
+✨ Features
+📊 Comprehensive Transaction Management: Easily add, retrieve, and visualize all your financial transactions.
 
-- ✅ `finance-tracker`: a **Next.js** frontend for managing and visualizing your finances
-- ☁️ `d1-tutorial`: a **Cloudflare Worker** backend that exposes REST APIs and connects to a **Cloudflare D1** database
+🔐 Secure Authentication: A dedicated dashboard secured with Firebase authentication ensures your data is private and protected.
 
----
+☁️ Cloud-Powered Performance: Leverages a fast and scalable Cloudflare Worker backend for efficient data handling.
 
-## 📁 Project Structure
+📈 Insightful Visualizations: Detailed chart views provide a clear overview of your spending history and financial trends.
 
+💰 Categorized Tracking: Effortlessly track income, expenses, and transfers to understand your financial flows.
+
+🔄 Cross-Device Sync: Your financial data is securely stored in the cloud, allowing seamless synchronization across all your devices.
+
+📁 Project Structure
 .
-├── d1-tutorial # Cloudflare Worker backend with SQLite (D1)
-└── finance-tracker # Frontend built with Next.js 14 App Router
+├── d1-tutorial/          # Cloudflare Worker backend with SQLite (D1)
+└── finance-tracker/      # Frontend built with Next.js 14 App Router
 
-yaml
-Copy
-Edit
 
----
 
-## 🚀 Features
 
-- 📊 Add, retrieve, and visualize transaction data
-- 🔐 Firebase-authenticated dashboard
-- ☁️ Fast and scalable Cloudflare Worker backend
-- 📈 Chart view for spending history
-- 💰 Track income, expenses, and transfers
+🚀 Getting Started
+Follow these steps to get your BachatBuddy project up and running on your local machine.
 
----
+Prerequisites
+Before you begin, ensure you have the following installed:
 
-## 💻 Getting Started
+Node.js: v18+ (recommended)
 
-### 1. Clone the Repository
+npm or yarn
 
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
-2. Set Up the Frontend (finance-tracker)
-bash
-Copy
-Edit
+Cloudflare Wrangler CLI: For managing and deploying the backend worker.
+
+Firebase Account: Required for user authentication.
+
+Installation
+Clone the repository:
+
+git clone https://github.com/Sanyaraj24/FinanceTracker.git
+cd finance-tracker
+
+
+
+
+Frontend Setup:
+
+Navigate to the finance-tracker directory, install dependencies, configure environment variables, and start the development server.
+
 cd finance-tracker
 npm install
+cp .env.example .env.local  
 npm run dev
-Open http://localhost:3000 in your browser.
 
-3. Set Up the Backend (d1-tutorial)
-bash
-Copy
-Edit
+
+
+
+Access the frontend in your browser at http://localhost:3000.
+
+Backend Setup:
+
+Navigate to the d1-tutorial directory, install dependencies, configure your Cloudflare settings, and start the backend development server.
+
 cd ../d1-tutorial
 npm install
+cp wrangler.toml.example wrangler.toml  
 npx wrangler dev
-Make sure you have Wrangler installed and authenticated.
 
-🌐 API Endpoints (Cloudflare Worker)
-POST /api/add-transaction — Add a new transaction
 
-GET /api/get-transactions?user_id=...&range=... — Fetch user transactions
 
-POST /api/add-account — Add a new account
 
-GET /api/get-accounts?user_id=... — Fetch user accounts
+🌐 API Endpoints
+The Cloudflare Worker backend exposes the following API endpoints:
 
-These APIs are consumed by the Next.js frontend.
+Endpoint
 
-🔐 Authentication & Database
-Firebase Authentication for user login
+Method
 
-Cloudflare D1 (SQLite) for storing all transactional and account data
+Description
+
+/api/add-transaction
+
+POST
+
+Adds a new financial transaction.
+
+/api/get-transactions
+
+GET
+
+Fetches transactions based on user_id and range.
+
+/api/add-account
+
+POST
+
+Adds a new financial account.
+
+/api/get-accounts
+
+GET
+
+Fetches accounts associated with a user_id.
 
 🛠 Tech Stack
-Frontend	Backend	Database	Auth
-Next.js 14	Cloudflare Workers	Cloudflare D1	Firebase
+BachatBuddy is built using a modern and robust set of technologies:
 
+Frontend
+
+Next.js 14 (App Router): A React framework for building fast web applications.
+
+Tailwind CSS: A utility-first CSS framework for rapid UI development.
+
+Chart.js: Flexible JavaScript charting for data visualization.
+
+Backend
+
+Cloudflare Workers: Serverless execution environment for powerful backend logic.
+
+Cloudflare D1 (SQLite): A serverless SQL database built on SQLite, running on Cloudflare's global network.
+
+Authentication
+
+Firebase: Google's comprehensive platform for authentication and other backend services.
+
+🔧
 🚀 Deployment
-Frontend (Next.js):
-Deploy finance-tracker using Vercel.
+Frontend (Vercel):
+For deploying the Next.js frontend to Vercel:
 
-Backend (Cloudflare Worker):
-bash
-Copy
-Edit
+Set the build command: npm run build
+
+Set the output directory: out
+
+Backend (Cloudflare):
+To publish the Cloudflare Worker backend:
+
 cd d1-tutorial
 npx wrangler publish
-```
+
+
+
+
+📸 Screenshots
+<img width="937" height="437" alt="image" src="https://github.com/user-attachments/assets/dbcf3246-6a02-47f2-9ad1-2f90457a77dc" />
+
+<img width="940" height="439" alt="image" src="https://github.com/user-attachments/assets/d16bd301-ec9b-4862-a1c6-72cca1308810" />
+
+<img width="916" height="420" alt="image" src="https://github.com/user-attachments/assets/1d338a5a-e746-4188-a2b5-66d910160101" />
+
+
+
+
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📧 Contact
+ Sanya- rajsanya2424@gmail.com 
+
+Link: https://github.com/Sanyaraj24/FinanceTracker
