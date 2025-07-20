@@ -144,8 +144,13 @@ npx wrangler publish
 
 
 📸 Screenshots
+<img width="937" height="437" alt="image" src="https://github.com/user-attachments/assets/dbcf3246-6a02-47f2-9ad1-2f90457a77dc" />
 
-<img width="950" height="437" alt="image" src="https://github.com/user-attachments/assets/ea7f1454-396c-43f2-a13f-23fb5d075133" />
+<img width="940" height="439" alt="image" src="https://github.com/user-attachments/assets/d16bd301-ec9b-4862-a1c6-72cca1308810" />
+
+<img width="916" height="420" alt="image" src="https://github.com/user-attachments/assets/1d338a5a-e746-4188-a2b5-66d910160101" />
+
+
 
 
 
