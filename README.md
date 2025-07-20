@@ -23,124 +23,26 @@ A robust, full-stack personal finance tracker designed to provide users with an 
 
 
 🚀 Getting Started
-Follow these steps to get your BachatBuddy project up and running on your local machine.
 
-Prerequisites
-Before you begin, ensure you have the following installed:
-
-Node.js: v18+ (recommended)
-
-npm or yarn
-
-Cloudflare Wrangler CLI: For managing and deploying the backend worker.
-
-Firebase Account: Required for user authentication.
-
-Installation
-Clone the repository:
-
-git clone https://github.com/Sanyaraj24/FinanceTracker.git
-cd finance-tracker
-
-
-
-
-Frontend Setup:
-
-Navigate to the finance-tracker directory, install dependencies, configure environment variables, and start the development server.
-
-cd finance-tracker
-npm install
-cp .env.example .env.local  
-npm run dev
-
-
-
-
-Access the frontend in your browser at http://localhost:3000.
-
-Backend Setup:
-
-Navigate to the d1-tutorial directory, install dependencies, configure your Cloudflare settings, and start the backend development server.
-
-cd ../d1-tutorial
-npm install
-cp wrangler.toml.example wrangler.toml  
-npx wrangler dev
-
-
-
-
-🌐 API Endpoints
-The Cloudflare Worker backend exposes the following API endpoints:
-
-Endpoint
-
-Method
-
-Description
-
-/api/add-transaction
-
-POST
-
-Adds a new financial transaction.
-
-/api/get-transactions
-
-GET
-
-Fetches transactions based on user_id and range.
-
-/api/add-account
-
-POST
-
-Adds a new financial account.
-
-/api/get-accounts
-
-GET
-
-Fetches accounts associated with a user_id.
+Endpoint	Method	Description
+/api/add-transaction	POST	Adds a new financial transaction.
+/api/get-transactions	GET	Fetches transactions based on user_id & range.
+/api/add-account	POST	Adds a new financial account.
+/api/get-accounts	GET	Retrieves accounts linked to a user_id.
 
 🛠 Tech Stack
-BachatBuddy is built using a modern and robust set of technologies:
+Category	Technology	Description
+Frontend	Next.js 14 (App Router)	React framework for building fast, scalable UIs.
+Tailwind CSS	Utility-first CSS for rapid styling.
+Chart.js	For interactive data visualizations.
+Backend	Cloudflare Workers	Serverless backend execution.
+Cloudflare D1 (SQLite)	Serverless SQL DB running globally via Cloudflare.
+Auth	Firebase	Google’s secure authentication system.
+AI	Gemini API	Used for AI-powered data extraction and enhancements.
 
-Frontend
-
-Next.js 14 (App Router): A React framework for building fast web applications.
-
-Tailwind CSS: A utility-first CSS framework for rapid UI development.
-
-Chart.js: Flexible JavaScript charting for data visualization.
-
-Backend
-
-Cloudflare Workers: Serverless execution environment for powerful backend logic.
-
-Cloudflare D1 (SQLite): A serverless SQL database built on SQLite, running on Cloudflare's global network.
-
-Authentication
-
-Firebase: Google's comprehensive platform for authentication and other backend services.
-
-🔧
 🚀 Deployment
-Frontend (Vercel):
-For deploying the Next.js frontend to Vercel:
-
-Set the build command: npm run build
-
-Set the output directory: out
-
-Backend (Cloudflare):
-To publish the Cloudflare Worker backend:
-
-cd d1-tutorial
-npx wrangler publish
-
-
+Frontend (Vercel)
+Build Command: npm run build
 
 
 📸 Screenshots
@@ -149,8 +51,6 @@ npx wrangler publish
 <img width="940" height="439" alt="image" src="https://github.com/user-attachments/assets/d16bd301-ec9b-4862-a1c6-72cca1308810" />
 
 <img width="916" height="420" alt="image" src="https://github.com/user-attachments/assets/1d338a5a-e746-4188-a2b5-66d910160101" />
-
-
 
 
 
