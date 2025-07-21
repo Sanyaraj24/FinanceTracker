@@ -1,5 +1,14 @@
 🧾BachatBUDDY
 A robust, full-stack personal finance tracker designed to provide users with an intuitive and powerful way to manage their financial transactions. With a clean, user-friendly interface and a scalable, cloud-powered backend, BachatBuddy helps you gain clarity and control over your spending, income, and transfers.
+:
+
+🌍 Live Demo
+🔗 Deployed Project:  https://bachatbuddy.vercel.app
+
+🎥 Demo Video
+📺 Watch on YouTube: https://youtu.be/Du2p6g6i7TM
+
+
 
 ✨ Features
 📊 Comprehensive Transaction Management: Easily add, retrieve, and visualize all your financial transactions.
@@ -24,12 +33,41 @@ A robust, full-stack personal finance tracker designed to provide users with an 
 
 🚀 Getting Started
 
+| Feature                      | Description                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| 📊 Transaction Management    | Add, retrieve, and visualize all your financial transactions easily.        |
+| 🔐 Secure Authentication     | Firebase-based login keeps your dashboard private and protected.            |
+| ☁️ Cloud-Powered Backend     | Fast, scalable backend using Cloudflare Workers + D1 for efficient storage. |
+| 💰 Categorized Tracking      | Separate tracking for income, expenses, and transfers.                      |
+| 🔄 Cross-Device Sync         | Seamlessly sync data across all devices via cloud storage.                  |
+
+TECHSTACK -
+
+| Category           | Technology              | Description                                                         |
+| ------------------ | ----------------------- | ------------------------------------------------------------------- |
+| **Frontend**       | Next.js 14 (App Router) | React-based framework for building fast, modern web applications.   |
+|                    | Tailwind CSS            | Utility-first CSS framework for efficient and responsive styling.   |
+|                    | Chart.js                | JavaScript charting library for data visualization.                 |
+| **Backend**        | Cloudflare Workers      | Serverless compute platform for lightweight, scalable backend.      |
+|                    | Cloudflare D1 (SQLite)  | Serverless SQL database powered by SQLite and distributed globally. |
+| **Authentication** | Firebase                | Google’s secure authentication and user management system.          |
+| **AI Integration** | Gemini API              | AI-powered data processing and text understanding by Google.        |
+
+
 
 Endpoint	Method	Description
-/api/add-transaction	POST	Adds a new financial transaction.
-/api/get-transactions	GET	Fetches transactions based on user_id & range.
-/api/add-account	POST	Adds a new financial account.
-/api/get-accounts	GET	Retrieves accounts linked to a user_id.
+| Endpoint                      | Method | Description                                                 |
+| ----------------------------- | ------ | ----------------------------------------------------------- |
+| `/api/add-transaction`        | POST   | Adds a new financial transaction to the database.           |
+| `/api/get-transactions`       | GET    | Retrieves transactions based on `user_id` and time `range`. |
+| `/api/add-account`            | POST   | Adds a new account (e.g., savings, credit card, cash).      |
+| `/api/get-accounts`           | GET    | Fetches all accounts linked to a specific `user_id`.        |
+| `/api/delete-transaction/:id` | DELETE | Deletes a transaction by its ID.                            |
+| `/api/delete-account/:id`     | DELETE | Deletes an account by its ID.                               |
+| `/api/update-profile`         | POST   | Updates user's profile details like phone, location, etc.   |
+
+<img width="509" height="379" alt="image" src="https://github.com/user-attachments/assets/275904fb-a132-47e4-90f7-bf09932044d3" />
+
 
 
 🚀 Deployment
